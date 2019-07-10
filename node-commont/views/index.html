@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="/public/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">hello ! wecome </h1>
+		<a class="btn btn-primary btn-publish" href="/comment">发表言论</a>
+		<ul class="list-group">
+			{{each datas}}
+				<li class="list-group-item">
+					<div class="pull-left">{{$value.name}}：{{$value.content}}</div>
+					<div class="pull-right">{{$value.createTime}}</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+
+</body>
+</html>
